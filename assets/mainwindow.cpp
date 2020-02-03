@@ -6,6 +6,17 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+}
+void MainWindow::paintEvent(QPaintEvent *pe)
+{
+    QPixmap pixmap("/home/teofan/Desktop/car.png");
+    QPainter paint(this);
+    int widWidth = this->ui->centralwidget->width();
+    int widHeight = this->ui->centralwidget->height();
+    pixmap = pixmap.scaled(widWidth, widHeight, Qt::KeepAspectRatioByExpanding);
+    paint.drawPixmap(0, 0, pixmap);
+    QWidget::paintEvent(pe);
 }
 
 MainWindow::~MainWindow()

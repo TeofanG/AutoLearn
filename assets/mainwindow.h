@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QListView>
+#include <QPainter>
+#include <QWidget>
 #include <learn.h>
 #include "play.h"
 
@@ -20,7 +23,7 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-
+    void paintEvent(QPaintEvent *pe);
     void on_pushButton_2_clicked();
 
 private:

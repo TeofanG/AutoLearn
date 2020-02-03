@@ -2,7 +2,8 @@
 #define LEARN_H
 
 #include <QDialog>
-
+#include <QFile>
+#include <QTextStream>
 namespace Ui {
 class learn;
 }

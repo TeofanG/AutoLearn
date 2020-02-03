@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>play</class>
- <widget name="play" class="QDialog">
+ <widget class="QDialog" name="play">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>AutoLearn - Joacă</string>
   </property>
  </widget>
  <resources/>
