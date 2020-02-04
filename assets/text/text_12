@@ -1,0 +1,10 @@
+Componentele sistemului de direcție:
+- volan: este montat pe coloana de direcție, care transmite mișcarea la caseta de direcție. În caseta de direcție este translată cremaliera corespunzător sensului de rotație al volanulul (spre stânga sau spre
+dreapta). La extremitățile cremalierei sunt montate bieletele de direcție, care transmit mișcarea de bracare la roți prin intermediul fuzetelor.
+- coloana de direcție: este o componentă a sistemului de direcție și se compune din:
+- ax volan: element de legatură între volan și caseta de direcție, articulat cu una sau două cruci cardanice.
+- sistem prindere: elementul ce permite fixarea fermă a axului volanului pe caroserie, păstrând libertatea de rotație a axului prin intermediul a doi rulmenți.
+- caseta de direcție: este componenta principală a sistemului de direcție, ce transformä mișcarea de rotație a axului volanului, în mișcare de translație stânga-dreapta. Această mișcare este transmisä
+mecanic prin intermediul unei cremaliere dințate.
+- bielete de directie: sunt elemente de legătură și au rolul de a transmite mișcarea de la caseta de direcție la elementele de directionare a roților.
+

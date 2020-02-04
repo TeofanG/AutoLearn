@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 }
 void MainWindow::paintEvent(QPaintEvent *pe)
 {
-    QPixmap pixmap("/home/teofan/Desktop/car.png");
+    QPixmap pixmap("../assets/pictures/car.png");
     QPainter paint(this);
     int widWidth = this->ui->centralwidget->width();
     int widHeight = this->ui->centralwidget->height();

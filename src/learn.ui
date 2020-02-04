@@ -32,7 +32,7 @@
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
-         <pointsize>12</pointsize>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="frameShape">
@@ -45,13 +45,13 @@
         <number>100</number>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;    Automobilul&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; – este un vehicul rutier, carosat si suspendat elastic pe cel putin trei roti, care se poate deplasa prin mijloace proprii de propulsie in diferite conditii de teren, si care este destinat transportului direct sau prin tractare al unor incarcaturi ce pot fi marfuri, persoane sau utilaje. Partile principale ale unui automobil sunt: &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;sasiul&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;motorul&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; si &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;caroseria&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Motoarele folosite la automobile sunt in majoritatea cazurilor, motoare cu ardere interna cu piston.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string/>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
        </property>
        <property name="scaledContents">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
@@ -125,19 +125,19 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>400</width>
-           <height>200</height>
+           <width>700</width>
+           <height>500</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>1500</width>
-           <height>1000</height>
+           <width>800</width>
+           <height>550</height>
           </size>
          </property>
          <property name="sizeIncrement">
           <size>
-           <width>20</width>
+           <width>0</width>
            <height>0</height>
           </size>
          </property>
@@ -145,7 +145,13 @@
           <enum>Qt::StrongFocus</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../assets/pictures/img_1.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
