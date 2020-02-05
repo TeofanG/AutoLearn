@@ -103,7 +103,7 @@ width: 150px;
 height: 70px;</string>
         </property>
         <property name="text">
-         <string>Învață</string>
+         <string>ÎNVAȚĂ</string>
         </property>
         <property name="autoDefault">
          <bool>false</bool>
@@ -161,7 +161,7 @@ width: 150px;
 height: 70px;</string>
         </property>
         <property name="text">
-         <string>Joacă</string>
+         <string>JOACĂ</string>
         </property>
         <property name="autoDefault">
          <bool>false</bool>
@@ -219,7 +219,7 @@ width: 150px;
 height: 70px;</string>
         </property>
         <property name="text">
-         <string>Închide</string>
+         <string>ÎNCHIDE</string>
         </property>
         <property name="autoDefault">
          <bool>false</bool>

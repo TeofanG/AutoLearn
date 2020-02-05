@@ -13,3 +13,10 @@ play::~play()
 {
     delete ui;
 }
+
+void play::on_pushButton_5_clicked()
+{
+    quiz quiz_window;
+    quiz_window.setModal(true);
+    quiz_window.exec();
+}

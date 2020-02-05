@@ -1,5 +1,5 @@
 
-QT       += core gui widgets
+QT       += core gui widgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,17 +21,20 @@ SOURCES += \
     learn.cpp \
     main.cpp \
     mainwindow.cpp \
-    play.cpp
+    play.cpp \
+    quiz.cpp
 
 HEADERS += \
     learn.h \
     mainwindow.h \
-    play.h
+    play.h \
+    quiz.h
 
 FORMS += \
     learn.ui \
     mainwindow.ui \
-    play.ui
+    play.ui \
+    quiz.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
