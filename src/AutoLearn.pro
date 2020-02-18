@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    guess.cpp \
     learn.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,12 +26,14 @@ SOURCES += \
     quiz.cpp
 
 HEADERS += \
+    guess.h \
     learn.h \
     mainwindow.h \
     play.h \
     quiz.h
 
 FORMS += \
+    guess.ui \
     learn.ui \
     mainwindow.ui \
     play.ui \

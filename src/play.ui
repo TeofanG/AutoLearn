@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>AutoLearn - Joacă</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -150,7 +150,7 @@ width: 150px;
 height: 70px;</string>
       </property>
       <property name="text">
-       <string>Joacă</string>
+       <string>GHICEȘTE</string>
       </property>
       <property name="autoDefault">
        <bool>false</bool>
