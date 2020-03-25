@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 }
 void MainWindow::paintEvent(QPaintEvent *pe)
 {
-    QPixmap pixmap("../assets/pictures/car.png");
+    QPixmap pixmap("../assets/design/car.png");
     QPainter paint(this);
     int widWidth = this->ui->centralwidget->width();
     int widHeight = this->ui->centralwidget->height();
@@ -27,7 +27,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    this->close();
     learn learn_window;
     learn_window.setModal(true);
     learn_window.exec();
@@ -35,7 +34,6 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    this->close();
     play play_window;
     play_window.setModal(true);
     play_window.exec();

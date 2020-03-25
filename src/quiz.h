@@ -9,6 +9,13 @@
 #include <QDebug>
 #include <QTimer>
 #include <QScopedPointerDeleter>
+#include <QPainter>
+#include <QTime>
+#include <QLabel>
+#include <QPixmap>
+#include <QBitmap>
+
+
 
 namespace Ui {
 class quiz;
@@ -17,6 +24,8 @@ class quiz;
 class quiz : public QDialog
 {
     Q_OBJECT
+
+
 
 public:
     QSqlDatabase mydb;
@@ -43,9 +52,12 @@ public:
     explicit quiz(QWidget *parent = nullptr);
     void set_question();
     void set_nota();
-    QString q2,q3,q4,q5,q6,q7,q8,q9,q10;
-    int i=2;
+    QString q1,q2,q3,q4,q5,q6,q7,q8,q9,q10;
+    int i=2, greseli = 0;
     ~quiz();
+
+
+
 
 private slots:
     void on_next_clicked();
@@ -58,9 +70,16 @@ private slots:
 
     void on_var_3_clicked();
 
+     void paintEvent(QPaintEvent *pe);
+
+
+     void on_close_clicked();
+
 private:
     Ui::quiz *ui;
     int nota=0;
+    void delay();
+    void reset();
 };
 
 #endif // QUIZ_H

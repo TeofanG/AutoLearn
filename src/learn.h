@@ -23,7 +23,7 @@ public:
 
 private slots:
     void on_toolButton_clicked();
-    void paintEvent(QPaintEvent *pe);
+
     void on_toolButton_2_clicked();
 
     void on_sasiul_clicked();
@@ -59,6 +59,11 @@ private slots:
     void on_car_6_clicked();
 
     void on_car_7_clicked();
+
+    void paintEvent(QPaintEvent *pe);
+
+
+    void on_toolButton_3_clicked();
 
 private:
     Ui::learn *ui;

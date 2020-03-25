@@ -2,6 +2,8 @@
 #define PLAY_H
 
 #include <QDialog>
+#include <QPainter>
+#include <QWidget>
 #include "quiz.h"
 
 namespace Ui {
@@ -14,10 +16,14 @@ class play : public QDialog
 
 public:
     explicit play(QWidget *parent = nullptr);
+
     ~play();
 
 private slots:
     void on_pushButton_5_clicked();
+    void paintEvent(QPaintEvent *pe);
+
+    void on_pushButton_6_clicked();
 
 private:
     Ui::play *ui;

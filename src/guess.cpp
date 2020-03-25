@@ -5,7 +5,6 @@ guess::guess(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::guess)
 {
-    setWindowFlags(Qt::Window);
     ui->setupUi(this);
 }
 

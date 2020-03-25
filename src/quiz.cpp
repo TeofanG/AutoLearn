@@ -6,19 +6,32 @@ quiz::quiz(QWidget *parent) :
     ui(new Ui::quiz)
 {
     setWindowFlags(Qt::Window);
+
     ui->setupUi(this);
     connOpen();
     set_question();
     set_var();
 }
 
+void quiz::paintEvent(QPaintEvent *pe)
+{
+    QPixmap pixmap("../assets/design/learn_bg.png");
+    QPainter paint(this);
+    int widWidth = this->width();
+    int widHeight = this->height();
+    pixmap = pixmap.scaled(widWidth, widHeight, Qt::KeepAspectRatioByExpanding);
+    paint.drawPixmap(0, 0, pixmap);
+    QWidget::paintEvent(pe);
+}
+
+
 void quiz::set_question() {
      QSqlQuery* qry = new QSqlQuery;
      qry->prepare("SELECT Question from questions order by random() limit 10");
      qry->exec();
      qry->first();
-     QString text = qry->value(0).toString();
-     ui->question->setText(text);
+     q1 = qry->value(0).toString();
+     ui->question->setText(q1);
      qry->next();
      q2 = qry->value(0).toString();
      qry->next();
@@ -46,6 +59,9 @@ quiz::~quiz()
 
 void quiz::on_next_clicked()
 {
+    greseli = 0;
+    QString iToString = QString::number(i);
+    ui->nr->setText(iToString);
     switch (i) {
         case 2:
                 ui->question->setText(q2);
@@ -79,7 +95,11 @@ void quiz::on_next_clicked()
     i++;
     set_var();
     QString n = QString::number(nota);
-    if(i==11) set_nota();
+    if(i==12) {
+        set_nota();
+        reset();
+        ui->nr->hide();
+    }
 }
 
 void quiz::set_var()
@@ -130,12 +150,16 @@ void quiz::on_var_1_clicked()
     QString choose = qry->value(0).toString();
 
     if(value==choose) {
-        nota+=10;
+        if(greseli==0) nota+=10;
+            else if (greseli==1) nota+=7;
+                else nota+=5;
+        ui->var_1->setStyleSheet("background-color:green");
+        delay();
         on_next_clicked();
     }
             else {
                   ui->var_1->setStyleSheet("background-color:red");
-                  nota-=10;
+                  greseli++;
     }
 }
 
@@ -150,12 +174,16 @@ void quiz::on_var_2_clicked()
     QString choose = qry->value(0).toString();
 
     if(value==choose) {
-        nota+=10;
+        if(greseli==0) nota+=10;
+            else if (greseli==1) nota+=7;
+                else nota+=5;
+        ui->var_2->setStyleSheet("background-color:green");
+        delay();
         on_next_clicked();
     }
             else {
                   ui->var_2->setStyleSheet("background-color:red");
-                  nota-=10;
+                  greseli++;
     }
 }
 
@@ -170,21 +198,51 @@ void quiz::on_var_3_clicked()
     QString choose = qry->value(0).toString();
 
     if(value==choose) {
-        nota+=10;
+        if(greseli==0) nota+=10;
+            else if (greseli==1) nota+=7;
+                else nota+=5;
+        ui->var_3->setStyleSheet("background-color:green");
+        delay();
         on_next_clicked();
     }
             else {
                   ui->var_3->setStyleSheet("background-color:red");
-                  nota-=10;
+                  greseli++;
     }
 }
 
+void quiz::delay()
+{
+    QTime dieTime= QTime::currentTime().addMSecs(200);
+    while (QTime::currentTime() < dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
+
 void quiz::set_nota() {
+    ui->verticalLayout_2->deleteLater();
+    ui->label->setMaximumWidth(800);
+    ui->label->setMaximumHeight(500);
+    ui->label->setMinimumWidth(800);
+    ui->label->setMinimumHeight(500);
+  //  ui->label->setMargin(80);
     ui->var_1->hide();
     ui->var_2->hide();
     ui->var_3->hide();
     ui->next->hide();
+    ui->question->hide();
+    ui->next->hide();
     QString nnota = QString::number(nota);
-    ui->question->setText("Felicitări, ați obținut " + nnota + " de puncte!");
+    if(nota<20) ui->pct->setText("Felicitări, ați obținut " + nnota + " puncte!");
+           else ui->pct->setText("Felicitări, ați obținut " + nnota + " de puncte!");
+}
 
+void quiz::reset() {
+    greseli = 0;
+    i = 2;
+    nota = 0;
+}
+
+void quiz::on_close_clicked()
+{
+    this->close();
 }

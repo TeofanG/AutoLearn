@@ -40,9 +40,10 @@ learn::learn(QWidget *parent) :
      this->ui->car_7->hide();
 }
 
+
 void learn::paintEvent(QPaintEvent *pe)
 {
-    QPixmap pixmap("../assets/pictures/learn_bg.png");
+    QPixmap pixmap("../assets/design/learn_bg.png");
     QPainter paint(this);
     int widWidth = this->width();
     int widHeight = this->height();
@@ -50,6 +51,7 @@ void learn::paintEvent(QPaintEvent *pe)
     paint.drawPixmap(0, 0, pixmap);
     QWidget::paintEvent(pe);
 }
+
 
 learn::~learn()
 {
@@ -143,7 +145,7 @@ void learn::on_motorul_clicked()
                 this->ui->sasiul->show();
                 this->ui->caroseria->show();
         }
-    counter = 17;
+    counter = 16;
     on_toolButton_clicked();
 }
 
@@ -173,7 +175,7 @@ void learn::on_caroseria_clicked()
                 this->ui->motorul->show();
                 this->ui->sasiul->show();
         }
-      counter = 20;
+      counter = 19;
       on_toolButton_clicked();
 }
 
@@ -191,72 +193,78 @@ void learn::on_sas_2_clicked()
 
 void learn::on_sas_3_clicked()
 {
-    counter = 14;
+    counter = 13;
     on_toolButton_clicked();
 }
 
 void learn::on_sas_4_clicked()
 {
-    counter = 15;
+    counter = 14;
     on_toolButton_clicked();
 }
 
 void learn::on_sas_5_clicked()
 {
-    counter = 16;
+    counter = 15;
     on_toolButton_clicked();
 }
 
 void learn::on_mot_1_clicked()
 {
-    counter = 18;
+    counter = 17;
     on_toolButton_clicked();
 }
 
 void learn::on_mot_2_clicked()
 {
-    counter = 19;
+    counter = 18;
     on_toolButton_clicked();
 }
 
 void learn::on_car_1_clicked()
 {
-    counter = 21;
+    counter = 20;
     on_toolButton_clicked();
 }
 
 void learn::on_car_2_clicked()
 {
-    counter = 22;
+    counter = 21;
     on_toolButton_clicked();
 }
 
 void learn::on_car_3_clicked()
 {
-    counter = 23;
+    counter = 22;
     on_toolButton_clicked();
 }
 
 void learn::on_car_4_clicked()
 {
-    counter = 24;
+    counter = 23;
     on_toolButton_clicked();
 }
 
 void learn::on_car_5_clicked()
 {
-    counter = 25;
+    counter = 24;
     on_toolButton_clicked();
 }
 
 void learn::on_car_6_clicked()
 {
-    counter = 26;
+    counter = 25;
     on_toolButton_clicked();
 }
 
 void learn::on_car_7_clicked()
 {
-    counter = 27;
+    counter = 26;
     on_toolButton_clicked();
+}
+
+
+void learn::on_toolButton_3_clicked()
+{
+    this->close();
 }
