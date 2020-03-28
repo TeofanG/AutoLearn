@@ -5,6 +5,7 @@
 #include <QPainter>
 #include <QWidget>
 #include "quiz.h"
+#include "guess.h"
 
 namespace Ui {
 class play;
@@ -24,6 +25,8 @@ private slots:
     void paintEvent(QPaintEvent *pe);
 
     void on_pushButton_6_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::play *ui;

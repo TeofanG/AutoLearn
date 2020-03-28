@@ -52,10 +52,7 @@ void quiz::set_question() {
      q10 = qry->value(0).toString();
 }
 
-quiz::~quiz()
-{
-    delete ui;
-}
+
 
 void quiz::on_next_clicked()
 {
@@ -141,15 +138,13 @@ void quiz::set_var()
 
 void quiz::on_var_1_clicked()
 {
-    QString value = ui->var_1->text();
-
     QSqlQuery* qry = new QSqlQuery;
-    qry->prepare("SELECT correct_answer from questions where var_1='"+value+"'");
+    qry->prepare("SELECT correct_answer from questions where var_1='"+ui->var_1->text()+"'");
     qry->exec();
     qry->first();
-    QString choose = qry->value(0).toString();
+    QString correct_var = qry->value(0).toString();
 
-    if(value==choose) {
+    if(ui->var_1->text()==correct_var) {
         if(greseli==0) nota+=10;
             else if (greseli==1) nota+=7;
                 else nota+=5;
@@ -165,15 +160,13 @@ void quiz::on_var_1_clicked()
 
 void quiz::on_var_2_clicked()
 {
-    QString value = ui->var_2->text();
-
     QSqlQuery* qry = new QSqlQuery;
-    qry->prepare("SELECT correct_answer from questions where var_2='"+value+"'");
+    qry->prepare("SELECT correct_answer from questions where var_2='"+ui->var_2->text()+"'");
     qry->exec();
     qry->first();
-    QString choose = qry->value(0).toString();
+    QString correct_var = qry->value(0).toString();
 
-    if(value==choose) {
+    if(ui->var_2->text()==correct_var) {
         if(greseli==0) nota+=10;
             else if (greseli==1) nota+=7;
                 else nota+=5;
@@ -244,5 +237,12 @@ void quiz::reset() {
 
 void quiz::on_close_clicked()
 {
+    connClose();
     this->close();
+}
+
+quiz::~quiz()
+{
+    connClose();
+    delete ui;
 }

@@ -25,8 +25,6 @@ class quiz : public QDialog
 {
     Q_OBJECT
 
-
-
 public:
     QSqlDatabase mydb;
     void connClose(){

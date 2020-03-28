@@ -37,3 +37,10 @@ void play::on_pushButton_6_clicked()
 {
     this->close();
 }
+
+void play::on_pushButton_4_clicked()
+{
+    guess guess_window;
+    guess_window.setModal(true);
+    guess_window.exec();
+}
