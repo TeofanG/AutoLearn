@@ -1,4 +1,4 @@
-
+#QMAKE_LFLAGS += -no-pie
 QT       += core gui widgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

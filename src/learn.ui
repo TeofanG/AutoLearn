@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>AutoLearn - Învață</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/design/logo.png</normaloff>../assets/design/logo.png</iconset>
+  </property>
   <property name="whatsThis">
    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;background-image: url(../assets/design/learn_bg.png);&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>

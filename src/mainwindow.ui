@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>AutoLearn - Acasă</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/design/icon.png</normaloff>../assets/design/icon.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="2" column="2" rowspan="4" colspan="2">
