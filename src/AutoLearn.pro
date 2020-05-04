@@ -1,6 +1,6 @@
 #QMAKE_LFLAGS += -no-pie
 QT       += core gui widgets sql
-
+QMAKE_LFLAGS += -no-pie
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
