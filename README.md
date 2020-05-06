@@ -8,7 +8,7 @@ Pentru a instala aplicatia, rulati executabilul din folderul "deploy".
 
 --Cerinte tehnice--
 
-* sistem de operare Linux
+*sistem de operare Linux
 
 *400 mb spatiu pe disc
 
