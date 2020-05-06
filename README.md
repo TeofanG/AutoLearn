@@ -5,3 +5,9 @@ AutoLearn este un software destinat invatarii notiunilor tehnice despre componen
 - informatiile tehnice din folderul "text" nu apartin si nu au fost realizate de dezvoltator.
 
 Pentru a instala aplicatia, rulati executabilul din folderul "deploy".
+
+--Cerinte tehnice--
+
+-Linux
+-400 mb spatiu pe disc
+-2gb Ram
