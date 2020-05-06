@@ -8,6 +8,8 @@ Pentru a instala aplicatia, rulati executabilul din folderul "deploy".
 
 --Cerinte tehnice--
 
--Linux
--400 mb spatiu pe disc
--2gb Ram
+* sistem de operare Linux
+
+*400 mb spatiu pe disc
+
+*2gb Ram
