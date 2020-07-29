@@ -270,6 +270,7 @@ void guess::reset() {
     ui->v2->setStyleSheet("background-color:#1b10dd;");
     ui->v3->setStyleSheet("background-color:#1b10dd;");
     ui->v4->setStyleSheet("background-color:#1b10dd;");
+
     greseli = 0;
 }
 
@@ -279,7 +280,9 @@ void guess::set_nota() {
     ui->v2->deleteLater();
     ui->v3->deleteLater();
     ui->v4->deleteLater();
-    ui->horizontalLayout->deleteLater();
+    ui->inchide->deleteLater();
+    ui->label->deleteLater();
+    //ui->horizontalLayout->deleteLater();
     QPixmap pixmap("../assets/design/mcqueen.png");
     ui->img->setPixmap(pixmap);
     this->setMaximumHeight(500);

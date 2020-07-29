@@ -16,7 +16,6 @@
 #include <QBitmap>
 
 
-
 namespace Ui {
 class quiz;
 }
